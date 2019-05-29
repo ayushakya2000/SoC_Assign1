@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Assign 1.4
+    </title>
+</head>
+
+<body>
+    <center>
+        <h1>A1.4 My First Subwindow</h1>
+
+        Enter address:
+        <input type="text" id="addr">
+        <input type="button" value="GO!" onclick="loadSite()">
+
+        <br><br>
+
+        <iframe id="window" src="" style=" height: 80vh; width: 60vw;">
+            IFrames not supported.
+        </iframe>
+    </center>
+
+</body>
+
+<script>
+    function loadSite() {
+        document.getElementById('window').setAttribute('src', document.getElementById('addr').value)
+    }
+</script>
+
+</html>

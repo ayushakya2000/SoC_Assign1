@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Assign 1.3
+    </title>
+</head>
+
+<body>
+    <center>
+        <h1>A1.3 My First Subwindow</h1>
+
+        Select website:
+        <select name="" id="dropdown">
+            <option value="0" selected>Select...</option>
+            <option value="1">Wikipedia</option>
+            <option value="2">Blogger</option>
+            <option value="3">IITK Website</option>
+        </select>
+        <input type="button" value="Submit" onclick="loadSite()">
+
+        <br><br>
+
+        <iframe id="window" src="" style="position: relative; height: 80vh; width: 60vw;">
+            IFrames not supported.
+        </iframe>
+    </center>
+
+</body>
+
+<script>
+    function loadSite() {
+        if (document.getElementById('dropdown').value == 1) {
+            document.getElementById('window').setAttribute('src', "https://www.wikipedia.org")
+        } else if (document.getElementById('dropdown').value == 2) {
+            document.getElementById('window').setAttribute('src', "https://www.blogger.com/")
+        } else if (document.getElementById('dropdown').value == 3) {
+            document.getElementById('window').setAttribute('src', "http://www.iitk.ac.in/")
+        }
+    }
+</script>
+
+</html>
